@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hello Recruto</title>
+
+</head>
+
+<body>
+	<h1 id="message">Загрузка...</h1>
+
+	<script>
+		// Получаем параметры из URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const name = urlParams.get('name') || 'Recruto';  // Параметр 'name'
+		const message = urlParams.get('message') || 'Давай дружить';  // Параметр 'message'
+
+		// Обновляем текст на странице
+		document.getElementById('message').textContent = `Hello ${name}! ${message}`;
+	</script>
+</body>
+
+</html>
